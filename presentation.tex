@@ -7,6 +7,12 @@
 This repository serves as a template for preparing structured presentations using \LaTeX. It includes three main source files, each with a specific purpose:
 
 \begin{frame}[fragile]{Overview of Files}
+  \begin{itemize}
+   \item \textbf{\texttt{slides.tex}} 
+   \item \textbf{\texttt{handout.tex}}
+   \item \textbf{\texttt{presentation.tex}}
+  \end{itemize}
+\end{frame}
 \begin{itemize}
   \item \textbf{\texttt{slides.tex}} – This file is used to generate the main presentation in Beamer format. It contains the content that is shown during the talk.
   
@@ -14,8 +20,28 @@ This repository serves as a template for preparing structured presentations usin
   
   \item \textbf{\texttt{presentation.tex}} – This file contains the full source text of the presentation. Content written inside \verb|\begin{frame}...\end{frame}| blocks is included both in the \texttt{slides.tex} and \texttt{handout.tex} outputs. Any text outside of frames is excluded from the presentation but included in the handout. This allows the author to provide detailed commentary, background, or additional explanation that supports the talk.
 \end{itemize}
-\end{frame}
 
 By separating the content and its representations in this way, the template
 enables clean and maintainable workflows for preparing talks and accompanying
 materials for later reference or publication.
+
+\begin{frame}[fragile]{How to Compile to PDF} 
+
+\begin{verbatim}
+$ lualatex slides.tex
+$ lualatex handout.tex
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{HTML Version}
+  Use \TeX4ht to compile the presentation to HTML format. 
+\begin{verbatim}
+$ make4ht -l handout.tex    
+\end{verbatim}
+
+The \verb|-l| option will use LuaLaTeX for the compilation.
+
+\end{frame}
+
+
+
