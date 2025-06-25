@@ -4,13 +4,23 @@
   \author{Michal Hoftich}
   \maketitle
 }
-This repository serves as a template for preparing structured presentations using \LaTeX. It includes three main source files, each with a specific purpose:
+
+\section{Introduction}
+
+This template is designed for presentations that need more than just slides. It
+lets you create both the talk itself and a more detailed handout with notes and
+commentary. That way, you can generate everything from a single source—both the
+material for the live talk and something meaningful for people who didn’t
+attend.
+
+It includes three main source files, each with a specific purpose:
 
 \begin{frame}[fragile]{Overview of Files}
   \begin{itemize}
    \item \textbf{\texttt{slides.tex}} 
    \item \textbf{\texttt{handout.tex}}
    \item \textbf{\texttt{presentation.tex}}
+   \item \textbf{\texttt{preamble.tex}}
   \end{itemize}
 \end{frame}
 \begin{itemize}
@@ -19,13 +29,16 @@ This repository serves as a template for preparing structured presentations usin
   \item \textbf{\texttt{handout.tex}} – A handout version of the presentation, formatted as a standard article. In addition to the visible content from the slides, it includes supplementary notes and commentary that do not appear in the presentation itself. This file is intended to be distributed after the presentation and should be self-contained, so that it is useful even to those who did not attend the talk.
   
   \item \textbf{\texttt{presentation.tex}} – This file contains the full source text of the presentation. Content written inside \verb|\begin{frame}...\end{frame}| blocks is included both in the \texttt{slides.tex} and \texttt{handout.tex} outputs. Any text outside of frames is excluded from the presentation but included in the handout. This allows the author to provide detailed commentary, background, or additional explanation that supports the talk.
+
+  \item  \textbf{preamble.tex} – This file should include packages or define commands which are used in the presentaion. 
 \end{itemize}
 
-By separating the content and its representations in this way, the template
-enables clean and maintainable workflows for preparing talks and accompanying
-materials for later reference or publication.
+
+\section{Compiling the Presentation}
 
 \begin{frame}[fragile]{How to Compile to PDF} 
+
+To compile the presentation or the handout to PDF using LuaLaTeX, run the following commands:
 
 \begin{verbatim}
 $ lualatex slides.tex
@@ -33,15 +46,101 @@ $ lualatex handout.tex
 \end{verbatim}
 \end{frame}
 
+You can compile the output files using any standard \LaTeX\ distribution that includes Beamer and the necessary packages.
+
 \begin{frame}[fragile]{HTML Version}
-  Use \TeX4ht to compile the presentation to HTML format. 
+  Use \href{https://www.tug.org/tex4ht/}{\TeX4ht} to compile the presentation to HTML format. 
 \begin{verbatim}
 $ make4ht -l handout.tex    
 \end{verbatim}
 
-The \verb|-l| option will use LuaLaTeX for the compilation.
+The \verb|-l| option  ensures that Lua\LaTeX\ is used as the compiler. 
+\end{frame}
+
+The HTML version is built from the article-style handout, not the Beamer
+slides. That makes it better suited for the web or long-term sharing, since it
+includes all the explanations and doesn’t depend on slide layout.
+
+\section{Automated HTML Output}
+This section explains how \href{https://docs.github.com/en/actions/writing-workflows/quickstart}{GitHub Actions} is used to automatically generate and
+publish an HTML version of the handout whenever changes are pushed to the main
+branch.
+
+The output is built using \texttt{make4ht} and published to the
+\texttt{gh-pages} branch, making it easy to share a web-readable version of the
+talk. 
+
+\begin{frame}[fragile]{GitHub Actions Overview}
+Key parts of the workflow that builds and publishes the HTML:
+
+\begin{verbatim}
+- name: Run make4ht
+  uses: xu-cheng/texlive-action/full@v1
+  with:
+    run: |
+      make4ht -lj index -a debug -d out handout.tex
+
+- name: Publish the web pages
+  uses: peaceiris/actions-gh-pages@v3
+  with:
+    github_token: ${{ secrets.GITHUB_TOKEN }}
+    publish_dir: ./out
+\end{verbatim}
 
 \end{frame}
+
+The workflow is defined in the \texttt{.github/workflows/main.yml} file. 
+You can edit this file to customize the build process, such as changing the
+options passed to \texttt{make4ht}.
+
+It uses two GitHub Actions: \href{https://github.com/xu-cheng/texlive-action}{xu-cheng/texlive-action}
+and \href{https://github.com/peaceiris/actions-gh-pages}{peaceiris/actions-gh-pages}. 
+The first action enables you to use any command available in the TeX Live installation, 
+such as \texttt{make4ht} or \texttt{lualatex}. The second action publishes the contents of a 
+given directory to the \texttt{gh-pages} branch of your repository, which is
+used by GitHub Pages to serve static content.
+
+
+
+\begin{frame}[fragile]{Automatic HTML Build}
+Changes pushed to \texttt{main} branch trigger a GitHub Actions workflow that:
+
+\begin{itemize}
+  \item Compiles \texttt{handout.tex} to HTML using \texttt{make4ht}
+  \item Publishes the output to the \texttt{gh-pages} branch
+\end{itemize}
+
+The command used is:
+
+\begin{verbatim}
+make4ht -lj index -a debug -d out handout.tex
+\end{verbatim}
+\end{frame}
+
+This builds the HTML into the \texttt{out/} folder, which is then published
+using \texttt{peaceiris/actions-gh-pages} action, specified by the
+\texttt{publish_dir} property.
+
+\begin{frame}[fragile]{Why \texttt{-j index}?}
+\begin{itemize}
+  \item The \texttt{-lj index} option is a shorthand for \texttt{-l -j index}
+  \item The \texttt{-j index} option sets the HTML output filename to \texttt{index.html}
+  \item This lets you use clean URLs like:
+  
+\begin{verbatim}
+https://username.github.io/repo/
+\end{verbatim}
+
+\end{itemize}
+\end{frame}
+
+There's no need to specify the filename in the link — GitHub Pages
+automatically looks for \texttt{index.html} by default. This makes it easier to share
+the presentation and avoids broken links due to filename mismatches.
+
+For example, this presentation is available at: \url{https://michal-h21.github.io/tex4ht-presentation/}.
+
+\section{Github Pages}
 
 
 
