@@ -1,0 +1,21 @@
+% if you want to include some content outside of frames also in slides, use \mode<
+\mode<beamer|article>{
+  \title{Structured Presentation Template}
+  \author{Michal Hoftich}
+  \maketitle
+}
+This repository serves as a template for preparing structured presentations using \LaTeX. It includes three main source files, each with a specific purpose:
+
+\begin{frame}[fragile]{Overview of Files}
+\begin{itemize}
+  \item \textbf{\texttt{slides.tex}} – This file is used to generate the main presentation in Beamer format. It contains the content that is shown during the talk.
+  
+  \item \textbf{\texttt{handout.tex}} – A handout version of the presentation, formatted as a standard article. In addition to the visible content from the slides, it includes supplementary notes and commentary that do not appear in the presentation itself. This file is intended to be distributed after the presentation and should be self-contained, so that it is useful even to those who did not attend the talk.
+  
+  \item \textbf{\texttt{presentation.tex}} – This file contains the full source text of the presentation. Content written inside \verb|\begin{frame}...\end{frame}| blocks is included both in the \texttt{slides.tex} and \texttt{handout.tex} outputs. Any text outside of frames is excluded from the presentation but included in the handout. This allows the author to provide detailed commentary, background, or additional explanation that supports the talk.
+\end{itemize}
+\end{frame}
+
+By separating the content and its representations in this way, the template
+enables clean and maintainable workflows for preparing talks and accompanying
+materials for later reference or publication.

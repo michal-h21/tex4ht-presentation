@@ -1,0 +1,12 @@
+%! TeX program = lualatex
+\documentclass[ignorenonframetext,aspectratio=169]{beamer}
+\usetheme{moloch} % <- change this to your preferred theme
+\begin{document}
+% we must use the \mode command, otherwise \input would be ignored, 
+% as the ignorenonframetext option causes all text outside of frames to be ignored
+\mode<beamer>{
+  % this is the main presentation file, put all slides and accompanying content here
+  \input{presentation.tex}
+}
+\end{document}
+
