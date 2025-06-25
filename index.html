@@ -1,0 +1,91 @@
+<!DOCTYPE html> 
+<html lang='en-US' xml:lang='en-US'> 
+<head><title>Structured Presentation Template</title> 
+<meta charset='utf-8' /> 
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='index.css' rel='stylesheet' type='text/css' /> 
+<meta content='index.tex' name='src' /> 
+</head><body>
+<div class='maketitle'>
+                                                                  
+
+                                                                  
+                                                                  
+
+                                                                  
+
+<h2 class='titleHead'>Structured Presentation Template</h2>
+ <div class='author'><span class='ec-lmr-12'>Michal Hoftich</span></div><br />
+<div class='date'><span class='ec-lmr-12'>June 25, 2025</span></div>
+</div>
+<!-- l. 7 --><p class='indent'>   This repository serves as a template for preparing structured presentations using
+LaTeX. It includes three main source files, each with a specific purpose:
+<a id='x1-2r1'></a>   
+
+</p>
+<!-- l. 10 --><p class='noindent'><span class='likeparagraphHead' id='overview-of-files'><a id='x1-1000'></a>Overview of Files</span>
+ 
+</p><!-- l. 10 --><p class='noindent'>
+</p>     
+<ul class='itemize1'>
+<li class='itemize'><span class='ec-lmtk-10'>slides.tex</span>
+</li>
+<li class='itemize'><span class='ec-lmtk-10'>handout.tex</span>
+</li>
+<li class='itemize'><span class='ec-lmtk-10'>presentation.tex</span></li></ul>
+<ul class='itemize1'>     
+<li class='itemize'><span class='ec-lmtk-10'>slides.tex</span>– This file is used to generate the main presentation in Beamer
+format. It contains the content that is shown during the talk.
+</li>
+<li class='itemize'><span class='ec-lmtk-10'>handout.tex </span>– A handout version of the presentation, formatted as a
+standard  article.  In  addition  to  the  visible  content  from  the  slides,  it
+includes  supplementary  notes  and  commentary  that  do  not  appear  in
+the presentation itself. This file is intended to be distributed after the
+presentation and should be self-contained, so that it is useful even to those
+who did not attend the talk.
+</li>
+<li class='itemize'><span class='ec-lmtk-10'>presentation.tex </span>–  This  file  contains  the  full  source  text  of  the
+presentation.  Content  written  inside  <span class='obeylines-h'><code class='verb'>\begin{frame}...\end{frame}</code></span>
+blocks is included both in the <span class='ec-lmtt-10'>slides.tex </span>and <span class='ec-lmtt-10'>handout.tex </span>outputs.
+Any text outside of frames is excluded from the presentation but included
+in the handout. This allows the author to provide detailed commentary,
+background, or additional explanation that supports the talk.</li></ul>
+<!-- l. 24 --><p class='indent'>   By separating the content and its representations in this way, the template
+enables clean and maintainable workflows for preparing talks and accompanying
+materials for later reference or publication.
+<a id='x1-1001r2'></a>   
+
+</p>
+<!-- l. 29 --><p class='noindent'><span class='likeparagraphHead' id='how-to-compile-to-pdf'><a id='x1-2000'></a>How to Compile to PDF</span>
+ 
+</p><!-- l. 29 --><p class='noindent'>
+                                                                  
+
+                                                                  
+</p>   
+<pre class='verbatim' id='verbatim-1'>
+$ lualatex slides.tex
+$ lualatex handout.tex
+</pre>
+<!-- l. 33 --><p class='nopar'>
+<a id='x1-2001r3'></a>   
+
+</p>
+<!-- l. 37 --><p class='noindent'><span class='likeparagraphHead' id='html-version'><a id='x1-3000'></a>HTML Version</span>
+ 
+</p><!-- l. 37 --><p class='noindent'>
+</p><!-- l. 37 --><p class='indent'>   Use TeX4ht to compile the presentation to HTML format.
+                                                                  
+
+                                                                  
+</p>   
+<pre class='verbatim' id='verbatim-2'>
+$ make4ht -l handout.tex
+</pre>
+<!-- l. 40 --><p class='nopar'>
+</p><!-- l. 42 --><p class='indent'>   The <span class='obeylines-h'><code class='verb'>-l</code></span> option will use LuaLaTeX for the compilation.
+</p>   
+ 
+</body> 
+</html>
