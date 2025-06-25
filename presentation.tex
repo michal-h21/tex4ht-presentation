@@ -33,6 +33,26 @@ It includes three main source files, each with a specific purpose:
   \item  \textbf{preamble.tex} – This file should include packages or define commands which are used in the presentaion. 
 \end{itemize}
 
+For example, source code of the previous text looks like this:
+
+\begin{verbatim}
+\begin{frame}[fragile]{Overview of Files}
+  \begin{itemize}
+   \item \textbf{\texttt{slides.tex}} 
+   \item \textbf{\texttt{handout.tex}}
+   \item \textbf{\texttt{presentation.tex}}
+   \item \textbf{\texttt{preamble.tex}}
+  \end{itemize}
+\end{frame}
+\begin{itemize}
+  \item \textbf{\texttt{slides.tex}} – This file is used to generate the main 
+  presentation in Beamer format. It contains the content that is shown during the talk.
+  ...
+\end{verbatim}
+
+The content inside the \verb|\begin{frame}...\end{frame}| block is included in both presentation
+and the handout, but the following itemize is only included in the handout. 
+
 
 \section{Compiling the Presentation}
 
@@ -142,5 +162,29 @@ For example, this presentation is available at: \url{https://michal-h21.github.i
 
 \section{Github Pages}
 
+\begin{frame}[fragile]{Github Actions Interface}
+  \includegraphics{img/github-actions.png}
+\end{frame}
+
+After you push changes to the \texttt{main} branch, you can check the \texttt{Actions} tab in your
+Github repository. It shows the status of the workflow, including whether it ran successfully or if there were any errors.
+
+\begin{frame}[fragile]{Errors}
+  \includegraphics{img/github-error.png}
+\end{frame}
+
+You can also check the logs of the workflow run to see what went wrong. If you
+encounter an error, it will be displayed in the logs, and you can use that
+information to debug the issue. In this case, there was an error in the filename 
+of the TeX file, which was not found. I had to fix the filename in the Github
+Actions Workflow YAML file.
+
+
+\begin{frame}[fragile]{Setup Github Pages}
+  \includegraphics{img/github-pages.png}
+\end{frame}
+
+Once the workflow runs successfully, you can set up GitHub Pages to serve the \texttt{gh-pages} branch.
+All output files produced by \texttt{make4ht} will be served on the Web.
 
 
