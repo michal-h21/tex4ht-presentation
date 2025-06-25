@@ -7,6 +7,14 @@
 .ec-lmtt-10{ font-family: monospace,monospace;}
 .ec-lmtt-10{ font-family: monospace,monospace;}
 .ec-lmtt-10{ font-family: monospace,monospace;}
+.ec-lmtt-10{ font-family: monospace,monospace;}
+.ec-lmbx-10{ font-weight: bold;}
+.ec-lmbx-10{ font-weight: bold;}
+.ec-lmbx-10{ font-weight: bold;}
+.ec-lmbx-10{ font-weight: bold;}
+.ec-lmbx-10{ font-weight: bold;}
+.ec-lmbx-10{ font-weight: bold;}
+.ec-lmtk-10{ font-family: monospace,monospace;}
 .ec-lmtk-10{ font-family: monospace,monospace;}
 .ec-lmtk-10{ font-family: monospace,monospace;}
 .ec-lmtk-10{ font-family: monospace,monospace;}
@@ -164,5 +172,6 @@ table.multline, table.multline-star {width:100%;}
 td.gather {text-align:center; }
 table.gather {width:100%;}
 div.gather-star {text-align:center;}
+.rotatebox{display: inline-block;}
 /* end css.sty */
 
