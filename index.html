@@ -23,9 +23,10 @@
 <h3 class='likesectionHead' id='contents'><a id='x1-1000'></a>Contents</h3>
 <div class='tableofcontents'>   
 <span class='sectionToc'>1 <a href='#introduction' id='QQ2-1-2'>Introduction</a></span>
-<br />   <span class='sectionToc'>2 <a href='#compiling-the-presentation' id='QQ2-1-6'>Compiling the Presentation</a></span>
-<br />   <span class='sectionToc'>3 <a href='#automated-html-output' id='QQ2-1-9'>Automated HTML Output</a></span>
-<br />   <span class='sectionToc'>4 <a href='#github-pages' id='QQ2-1-13'>Github Pages</a></span>
+<br />   <span class='sectionToc'>2 <a href='#basic-usage' id='QQ2-1-4'>Basic Usage</a></span>
+<br />   <span class='sectionToc'>3 <a href='#compiling-the-presentation' id='QQ2-1-8'>Compiling the Presentation</a></span>
+<br />   <span class='sectionToc'>4 <a href='#automated-html-output' id='QQ2-1-11'>Automated HTML Output</a></span>
+<br />   <span class='sectionToc'>5 <a href='#github-pages' id='QQ2-1-15'>Github Pages</a></span>
 </div>   
 
 <h3 class='sectionHead' id='introduction'><span class='titlemark'>1   </span> <a id='x1-20001'></a>Introduction</h3>
@@ -72,12 +73,12 @@ blocks is included both in the <span class='ec-lmtt-10'>slides.tex </span>and <s
 Any text outside of frames is excluded from the presentation but included
 in the handout. This allows the author to provide detailed commentary,
 background, or additional explanation that supports the talk.
-</li>
-<li class='itemize'><span class='ec-lmbx-10'>preamble.tex </span>– This file includes packages or defines commands used in
-the presentation.
                                                                   
 
                                                                   
+</li>
+<li class='itemize'><span class='ec-lmbx-10'>preamble.tex </span>– This file includes packages or defines commands used in
+the presentation.
 </li>
 <li class='itemize'><span class='ec-lmbx-10'>config.cfg </span>–  This  file  contains  configuration  options  for  TeX4ht.  For
 example  CSS  styles  used  in  the  web  version  of  this  document,  or
@@ -87,17 +88,35 @@ redefinitions of LaTeX commands.
 At the minimum, you will want to replace contents of <span class='ec-lmtt-10'>presentation.tex </span>with your
 own text, and you may also want to modify the <span class='ec-lmtt-10'>preamble.tex </span>file to include any
 additional packages or commands you need.
-<a id='x1-3001r2'></a>   
+
+</p>   
+<h3 class='sectionHead' id='basic-usage'><span class='titlemark'>2   </span> <a id='x1-40002'></a>Basic Usage</h3>
+<p><a id='x1-4001r2'></a>   
+
+<!-- l. 67 --></p><p class='noindent'><span class='likeparagraphHead' id='create-a-new-github-repository'><a id='x1-5000'></a>Create a New Github Repository</span>
+ 
+</p><!-- l. 67 --><p class='noindent'>
+</p><!-- l. 67 --><p class='indent'>   <img alt='PIC' src='img/template-use.png' />
+</p><!-- l. 70 --><p class='noindent'>To start your own presentation using this template, click the "Use this template"
+button at the top of the GitHub repository page. This will create a new repository in
+your account with the same structure and files. You can then clone it, customize the
+content, and start building your own slides and handouts.
+<a id='x1-5001r3'></a>   
 
 </p>
-<!-- l. 66 --><p class='noindent'><span class='likeparagraphHead' id='usage-of-frames-and-handout-commentary'><a id='x1-4000'></a>Usage of Frames and Handout Commentary</span>
+<!-- l. 78 --><p class='noindent'><span class='likeparagraphHead' id='usage-of-frames-and-handout-commentary'><a id='x1-6000'></a>Usage of Frames and Handout Commentary</span>
  
-</p><!-- l. 66 --><p class='noindent'>
-</p>   
+</p><!-- l. 78 --><p class='noindent'>
+</p><!-- l. 79 --><p class='noindent'>
+</p><!-- l. 79 --><p class='noindent'>A basic syntax of the document used in <span class='obeylines-h'><code class='verb'>presentation.tex</code></span> is following:
+</p>
+                                                                  
+
+                                                                  
 <pre class='likeverbatim'> <span class='obeylines-h'><code class='verb'>\begin{frame}{Frame title}</code></span> <span class='obeylines-h'><code class='verb'>contents of the frame...</code></span> <span class='obeylines-h'><code class='verb'>\end</code></span><span class='obeylines-h'><code class='verb'>{frame}</code></span>
 <span class='obeylines-h'><code class='verb'>Commentary included in the handout</code></span> </pre>
-<!-- l. 77 --><p class='indent'>   For example, source code of the previous text looks like this:
-</p><!-- l. 79 --><p class='indent'>   <span class='obeylines-h'><code class='verb'>\begin</code></span><span class='obeylines-h'><code class='verb'>{frame}[fragile]{Overview of Files}</code></span>
+<!-- l. 93 --><p class='indent'>   For example, source code of one of the previous frames looks like this:
+</p><!-- l. 95 --><p class='indent'>   <span class='obeylines-h'><code class='verb'>\begin</code></span><span class='obeylines-h'><code class='verb'>{frame}[fragile]{Overview of Files}</code></span>
                                                                   
 
                                                                   
@@ -110,7 +129,7 @@ additional packages or commands you need.
    \item \textbf{\texttt{preamble.tex}}
   \end{itemize}
 </pre>
-<!-- l. 87 --><p class='nopar'> <span class='obeylines-h'><code class='verb'>\end</code></span><span class='obeylines-h'><code class='verb'>{frame}</code></span>
+<!-- l. 103 --><p class='nopar'> <span class='obeylines-h'><code class='verb'>\end</code></span><span class='obeylines-h'><code class='verb'>{frame}</code></span>
                                                                   
 
                                                                   
@@ -120,16 +139,16 @@ additional packages or commands you need.
   \item \textbf{\texttt{slides.tex}} – This file is used to generate the main
   presentation in Beamer format. It contains the content that is shown during the talk.
 </pre>
-<!-- l. 93 --><p class='nopar'>
-</p><!-- l. 95 --><p class='indent'>   The content inside the <span class='obeylines-h'><code class='verb'>\begin</code></span><span class='obeylines-h'><code class='verb'>{frame}...\end</code></span><span class='obeylines-h'><code class='verb'>{frame}</code></span> block is included in both
+<!-- l. 109 --><p class='nopar'>
+</p><!-- l. 111 --><p class='indent'>   The content inside the <span class='obeylines-h'><code class='verb'>\begin</code></span><span class='obeylines-h'><code class='verb'>{frame}...\end</code></span><span class='obeylines-h'><code class='verb'>{frame}</code></span> block is included in both
 the presentation and the handout, but the <span class='ec-lmtt-10'>itemize </span>environment that follows the
 <span class='obeylines-h'><code class='verb'>frame</code></span> environment is only included in the handout.
-<a id='x1-4001r3'></a>   
+<a id='x1-6001r4'></a>   
 
 </p>
-<!-- l. 101 --><p class='noindent'><span class='likeparagraphHead' id='shared-content-outside-of-frames'><a id='x1-5000'></a>Shared Content Outside of Frames</span>
+<!-- l. 117 --><p class='noindent'><span class='likeparagraphHead' id='shared-content-outside-of-frames'><a id='x1-7000'></a>Shared Content Outside of Frames</span>
  
-</p><!-- l. 101 --><p class='noindent'>
+</p><!-- l. 117 --><p class='noindent'>
                                                                   
 
                                                                   
@@ -142,19 +161,19 @@ the presentation and the handout, but the <span class='ec-lmtt-10'>itemize </spa
 }
 
 </pre>
-<!-- l. 109 --><p class='nopar'>
-</p><!-- l. 112 --><p class='indent'>   You can use the <span class='obeylines-h'><code class='verb'>\mode&lt;beamer|article&gt;{...}</code></span> command to include content that
+<!-- l. 125 --><p class='nopar'>
+</p><!-- l. 128 --><p class='indent'>   You can use the <span class='obeylines-h'><code class='verb'>\mode&lt;beamer|article&gt;{...}</code></span> command to include content that
 should be shown in both the presentation and the handout. This can be useful for the
 presentation title or table of contents, for example.
 
 </p>   
-<h3 class='sectionHead' id='compiling-the-presentation'><span class='titlemark'>2   </span> <a id='x1-60002'></a>Compiling the Presentation</h3>
-<p><a id='x1-6001r4'></a>   
+<h3 class='sectionHead' id='compiling-the-presentation'><span class='titlemark'>3   </span> <a id='x1-80003'></a>Compiling the Presentation</h3>
+<p><a id='x1-8001r5'></a>   
 
-<!-- l. 122 --></p><p class='noindent'><span class='likeparagraphHead' id='how-to-compile-to-pdf'><a id='x1-7000'></a>How to Compile to PDF</span>
+<!-- l. 138 --></p><p class='noindent'><span class='likeparagraphHead' id='how-to-compile-to-pdf'><a id='x1-9000'></a>How to Compile to PDF</span>
  
-</p><!-- l. 122 --><p class='noindent'>
-</p><!-- l. 123 --><p class='indent'>   To compile the presentation or the handout to PDF using LuaLaTeX, run the
+</p><!-- l. 138 --><p class='noindent'>
+</p><!-- l. 139 --><p class='indent'>   To compile the presentation or the handout to PDF using LuaLaTeX, run the
 following commands:
                                                                   
 
@@ -164,16 +183,16 @@ following commands:
 $ lualatex slides.tex
 $ lualatex handout.tex
 </pre>
-<!-- l. 128 --><p class='nopar'>
-</p><!-- l. 131 --><p class='noindent'>You can compile the output files using any standard LaTeX distribution that
+<!-- l. 144 --><p class='nopar'>
+</p><!-- l. 147 --><p class='noindent'>You can compile the output files using any standard LaTeX distribution that
 includes Beamer and the necessary packages.
-<a id='x1-7001r5'></a>   
+<a id='x1-9001r6'></a>   
 
 </p>
-<!-- l. 134 --><p class='noindent'><span class='likeparagraphHead' id='html-version'><a id='x1-8000'></a>HTML Version</span>
+<!-- l. 150 --><p class='noindent'><span class='likeparagraphHead' id='html-version'><a id='x1-10000'></a>HTML Version</span>
  
-</p><!-- l. 134 --><p class='noindent'>
-</p><!-- l. 134 --><p class='indent'>   Use  <a href='https://www.tug.org/tex4ht/'>TeX4ht</a> to compile the presentation to HTML format.
+</p><!-- l. 150 --><p class='noindent'>
+</p><!-- l. 150 --><p class='indent'>   Use  <a href='https://www.tug.org/tex4ht/'>TeX4ht</a> to compile the presentation to HTML format.
                                                                   
 
                                                                   
@@ -181,26 +200,26 @@ includes Beamer and the necessary packages.
 <pre class='verbatim' id='verbatim-5'>
 $ make4ht -l handout.tex
 </pre>
-<!-- l. 137 --><p class='nopar'>
-</p><!-- l. 139 --><p class='indent'>   The <span class='obeylines-h'><code class='verb'>-l</code></span> option ensures that LuaLaTeX is used as the compiler.
-</p><!-- l. 143 --><p class='indent'>   The HTML version is built from the article-style handout, not the Beamer slides.
+<!-- l. 153 --><p class='nopar'>
+</p><!-- l. 155 --><p class='indent'>   The <span class='obeylines-h'><code class='verb'>-l</code></span> option ensures that LuaLaTeX is used as the compiler.
+</p><!-- l. 159 --><p class='indent'>   The HTML version is built from the article-style handout, not the Beamer slides.
 This makes it better suited for the web or long-term sharing, since it includes all
 explanations and doesn’t depend on slide layout.
 
 </p>   
-<h3 class='sectionHead' id='automated-html-output'><span class='titlemark'>3   </span> <a id='x1-90003'></a>Automated HTML Output</h3>
-<!-- l. 149 --><p class='noindent'>This section explains how  <a href='https://docs.github.com/en/actions/writing-workflows/quickstart'>GitHub Actions</a> is used to automatically generate and
+<h3 class='sectionHead' id='automated-html-output'><span class='titlemark'>4   </span> <a id='x1-110004'></a>Automated HTML Output</h3>
+<!-- l. 165 --><p class='noindent'>This section explains how  <a href='https://docs.github.com/en/actions/writing-workflows/quickstart'>GitHub Actions</a> is used to automatically generate and
 publish an HTML version of the handout whenever changes are pushed to the <span class='ec-lmtt-10'>main</span>
 branch.
-</p><!-- l. 152 --><p class='indent'>   The output is built using <span class='ec-lmtt-10'>make4ht </span>and published to the <span class='ec-lmtt-10'>gh-pages </span>branch, making
+</p><!-- l. 168 --><p class='indent'>   The output is built using <span class='ec-lmtt-10'>make4ht </span>and published to the <span class='ec-lmtt-10'>gh-pages </span>branch, making
 it easy to share a web-readable version of the talk.
-<a id='x1-9001r6'></a>   
+<a id='x1-11001r7'></a>   
 
 </p>
-<!-- l. 156 --><p class='noindent'><span class='likeparagraphHead' id='github-actions-overview'><a id='x1-10000'></a>GitHub Actions Overview</span>
+<!-- l. 172 --><p class='noindent'><span class='likeparagraphHead' id='github-actions-overview'><a id='x1-12000'></a>GitHub Actions Overview</span>
  
-</p><!-- l. 156 --><p class='noindent'>
-</p><!-- l. 156 --><p class='indent'>   Key parts of the workflow that builds and publishes the HTML:
+</p><!-- l. 172 --><p class='noindent'>
+</p><!-- l. 172 --><p class='indent'>   Key parts of the workflow that builds and publishes the HTML:
                                                                   
 
                                                                   
@@ -218,28 +237,28 @@ it easy to share a web-readable version of the talk.
     github_token: ${{ secrets.GITHUB_TOKEN }}
     publish_dir: ./out
 </pre>
-<!-- l. 170 --><p class='nopar'>
-</p><!-- l. 175 --><p class='indent'>   The workflow is defined in <span class='ec-lmtt-10'>.github/workflows/main.yml</span>. You can edit this
+<!-- l. 186 --><p class='nopar'>
+</p><!-- l. 191 --><p class='indent'>   The workflow is defined in <span class='ec-lmtt-10'>.github/workflows/main.yml</span>. You can edit this
 file to customize the build process, such as changing the options passed to
 <span class='ec-lmtt-10'>make4ht</span>.
-</p><!-- l. 178 --><p class='indent'>   It uses two GitHub Actions:  <a href='https://github.com/xu-cheng/texlive-action'>xu-cheng/texlive-action</a> and  <a href='https://github.com/peaceiris/actions-gh-pages'>peaceiris/actions-gh-pages</a>.
+</p><!-- l. 194 --><p class='indent'>   It uses two GitHub Actions:  <a href='https://github.com/xu-cheng/texlive-action'>xu-cheng/texlive-action</a> and  <a href='https://github.com/peaceiris/actions-gh-pages'>peaceiris/actions-gh-pages</a>.
 The first one lets you use any command available in the TeX Live installation, such
 as <span class='ec-lmtt-10'>make4ht </span>or <span class='ec-lmtt-10'>lualatex</span>. The second one publishes the contents of a specified
 directory to the <span class='ec-lmtt-10'>gh-pages </span>branch of your repository, which is used by GitHub Pages
 to serve static content.
-<a id='x1-10001r7'></a>   
+<a id='x1-12001r8'></a>   
 
 </p>
-<!-- l. 187 --><p class='noindent'><span class='likeparagraphHead' id='automatic-html-build'><a id='x1-11000'></a>Automatic HTML Build</span>
+<!-- l. 203 --><p class='noindent'><span class='likeparagraphHead' id='automatic-html-build'><a id='x1-13000'></a>Automatic HTML Build</span>
  
-</p><!-- l. 187 --><p class='noindent'>
-</p><!-- l. 187 --><p class='indent'>   Changes pushed to <span class='ec-lmtt-10'>main </span>branch trigger a GitHub Actions workflow that:
+</p><!-- l. 203 --><p class='noindent'>
+</p><!-- l. 203 --><p class='indent'>   Changes pushed to <span class='ec-lmtt-10'>main </span>branch trigger a GitHub Actions workflow that:
 </p>     
 <ul class='itemize1'>
 <li class='itemize'>Compiles <span class='ec-lmtt-10'>handout.tex </span>to HTML using <span class='ec-lmtt-10'>make4ht</span>
 </li>
 <li class='itemize'>Publishes the output to the <span class='ec-lmtt-10'>gh-pages </span>branch</li></ul>
-<!-- l. 194 --><p class='indent'>   The command used is:
+<!-- l. 210 --><p class='indent'>   The command used is:
                                                                   
 
                                                                   
@@ -247,16 +266,16 @@ to serve static content.
 <pre class='verbatim' id='verbatim-7'>
 make4ht -lj index -a debug -d out handout.tex
 </pre>
-<!-- l. 198 --><p class='nopar'>
-</p><!-- l. 202 --><p class='indent'>   This builds the HTML into the <span class='ec-lmtt-10'>out/ </span>folder, which is then published using
+<!-- l. 214 --><p class='nopar'>
+</p><!-- l. 218 --><p class='indent'>   This builds the HTML into the <span class='ec-lmtt-10'>out/ </span>folder, which is then published using
 the <span class='ec-lmtt-10'>peaceiris/actions-gh-pages </span>action, specified by the <span class='ec-lmtt-10'>publish_dir</span>
 setting.
-<a id='x1-11001r8'></a>   
+<a id='x1-13001r9'></a>   
 
 </p>
-<!-- l. 208 --><p class='noindent'><span class='likeparagraphHead' id='why-j-index'><a id='x1-12000'></a>Why <span class='ec-lmtt-10'>-j index</span>?</span>
+<!-- l. 224 --><p class='noindent'><span class='likeparagraphHead' id='why-j-index'><a id='x1-14000'></a>Why <span class='ec-lmtt-10'>-j index</span>?</span>
  
-</p><!-- l. 208 --><p class='noindent'>
+</p><!-- l. 224 --><p class='noindent'>
 </p>     
 <ul class='itemize1'>
 <li class='itemize'>The <span class='ec-lmtt-10'>-lj index </span>option is a shorthand for <span class='ec-lmtt-10'>-l -j index</span>
@@ -264,7 +283,7 @@ setting.
 <li class='itemize'>The <span class='ec-lmtt-10'>-j index </span>option sets the HTML output filename to <span class='ec-lmtt-10'>index.html</span>
 </li>
 <li class='itemize'>     
-<!-- l. 211 --><p class='noindent'>This lets you use clean URLs like:
+<!-- l. 227 --><p class='noindent'>This lets you use clean URLs like:
                                                                   
 
                                                                   
@@ -272,51 +291,51 @@ setting.
 <pre class='verbatim' id='verbatim-8'>
 https://username.github.io/repo/
 </pre>     
-<!-- l. 215 --><p class='nopar'>
+<!-- l. 231 --><p class='nopar'>
 </p>     
 </li></ul>
-<!-- l. 221 --><p class='indent'>   There’s no need to specify the filename in the link — GitHub Pages automatically
+<!-- l. 237 --><p class='indent'>   There’s no need to specify the filename in the link — GitHub Pages automatically
 looks for <span class='ec-lmtt-10'>index.html </span>by default. This makes it easier to share the presentation and
 helps avoid broken links due to filename mismatches.
-</p><!-- l. 225 --><p class='indent'>   For example, this presentation is available at: 
+</p><!-- l. 241 --><p class='indent'>   For example, this presentation is available at: 
 <a class='url' href='https://michal-h21.github.io/tex4ht-presentation/'><span class='ec-lmtt-10'>https://michal-h21.github.io/tex4ht-presentation/</span></a>.
 
 </p>   
-<h3 class='sectionHead' id='github-pages'><span class='titlemark'>4   </span> <a id='x1-130004'></a>Github Pages</h3>
-<p><a id='x1-13001r9'></a>   
+<h3 class='sectionHead' id='github-pages'><span class='titlemark'>5   </span> <a id='x1-150005'></a>Github Pages</h3>
+<p><a id='x1-15001r10'></a>   
 
-<!-- l. 230 --></p><p class='noindent'><span class='likeparagraphHead' id='github-actions-interface'><a id='x1-14000'></a>Github Actions Interface</span>
+<!-- l. 246 --></p><p class='noindent'><span class='likeparagraphHead' id='github-actions-interface'><a id='x1-16000'></a>Github Actions Interface</span>
  
-</p><!-- l. 230 --><p class='noindent'>
-</p><!-- l. 230 --><p class='indent'>   <img alt='PIC' src='img/github-actions.png' />
-</p><!-- l. 233 --><p class='noindent'>After you push changes to the <span class='ec-lmtt-10'>main </span>branch, you can check the <span class='ec-lmtt-10'>Actions </span>tab in your
+</p><!-- l. 246 --><p class='noindent'>
+</p><!-- l. 246 --><p class='indent'>   <img alt='PIC' src='img/github-actions.png' />
+</p><!-- l. 249 --><p class='noindent'>After you push changes to the <span class='ec-lmtt-10'>main </span>branch, you can check the <span class='ec-lmtt-10'>Actions </span>tab in your
 Github repository. It shows the status of the workflow, including whether it ran
 successfully or if there were any errors.
-<a id='x1-14001r10'></a>   
+<a id='x1-16001r11'></a>   
 
 </p>
-<!-- l. 238 --><p class='noindent'><span class='likeparagraphHead' id='errors'><a id='x1-15000'></a>Errors</span>
+<!-- l. 254 --><p class='noindent'><span class='likeparagraphHead' id='errors'><a id='x1-17000'></a>Errors</span>
  
-</p><!-- l. 238 --><p class='noindent'>
-</p><!-- l. 238 --><p class='indent'>   <img alt='PIC' src='img/github-error.png' />
-</p><!-- l. 242 --><p class='indent'>   You can also check the logs of the workflow run to see what went wrong. If you
+</p><!-- l. 254 --><p class='noindent'>
+</p><!-- l. 254 --><p class='indent'>   <img alt='PIC' src='img/github-error.png' />
+</p><!-- l. 258 --><p class='indent'>   You can also check the logs of the workflow run to see what went wrong. If you
 encounter an error, it will be displayed in the logs, and you can use that information
 to debug the issue.
-</p><!-- l. 246 --><p class='indent'>   In this case, the filename of the TeX file was incorrect. I had to fix the filename in
+</p><!-- l. 262 --><p class='indent'>   In this case, the filename of the TeX file was incorrect. I had to fix the filename in
 the GitHub Actions YAML file.
                                                                   
 
                                                                   
-<a id='x1-15001r11'></a>   
+<a id='x1-17001r12'></a>   
 
 </p>
-<!-- l. 250 --><p class='noindent'><span class='likeparagraphHead' id='setup-github-pages'><a id='x1-16000'></a>Setup Github Pages</span>
+<!-- l. 266 --><p class='noindent'><span class='likeparagraphHead' id='setup-github-pages'><a id='x1-18000'></a>Setup Github Pages</span>
  
-</p><!-- l. 250 --><p class='noindent'>
-</p><!-- l. 250 --><p class='indent'>   <img alt='PIC' src='img/github-pages.png' />
-</p><!-- l. 253 --><p class='indent'>   Once the workflow runs successfully, you can set up GitHub Pages to serve the
+</p><!-- l. 266 --><p class='noindent'>
+</p><!-- l. 266 --><p class='indent'>   <img alt='PIC' src='img/github-pages.png' />
+</p><!-- l. 269 --><p class='indent'>   Once the workflow runs successfully, you can set up GitHub Pages to serve the
 <span class='ec-lmtt-10'>gh-pages </span>branch.
-</p><!-- l. 255 --><p class='indent'>   All output files produced by <span class='ec-lmtt-10'>make4ht </span>will be served on the web. They will be
+</p><!-- l. 271 --><p class='indent'>   All output files produced by <span class='ec-lmtt-10'>make4ht </span>will be served on the web. They will be
 available at: <span class='obeylines-h'><code class='verb'>https://username.github.io/repo/</code></span>, where <span class='ec-lmtt-10'>username </span>is your GitHub
 username and <span class='ec-lmtt-10'>repo </span>is the name of your repository.
 </p>   

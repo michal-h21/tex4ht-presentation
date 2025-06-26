@@ -174,10 +174,10 @@ table.gather {width:100%;}
 div.gather-star {text-align:center;}
 .rotatebox{display: inline-block;}
 .likeverbatim .obeylines-h{display:block;}
-.tableofcontents {position: fixed; left: 0px; top:0px; height: 100vh; background-color: #f0f0f0; padding:1ch; width: 23ch;}
-body{margin-left: 25ch;}
-@media (max-width: 100ch){.tableofcontents {position: relative; height: auto; width: auto;}}
-@media (max-width: 100ch){body{margin-left: 0;}}
+.tableofcontents {position: fixed; left: 0px; top:0px; height: 100vh; background-color: #f0f0f0; padding:1ch; width: 28ch;}
+body{margin-left: 32ch;}
+@media (max-width: 105ch){.tableofcontents {position: relative; height: auto; width: auto;}}
+@media (max-width: 105ch){body{margin-left: 0;}}
 .tableofcontents a {color: #0f0f0f;}
 .tableofcontents a:hover {color: #6f5f4f;}
 #contents{display:none;}
