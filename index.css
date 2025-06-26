@@ -173,5 +173,6 @@ td.gather {text-align:center; }
 table.gather {width:100%;}
 div.gather-star {text-align:center;}
 .rotatebox{display: inline-block;}
+.likeverbatim .obeylines-h{display:block;}
 /* end css.sty */
 
