@@ -1,5 +1,6 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
-\newenvironment{likeverbatim}
-  {}
-  {}
+% I use this environment to force linebreaks one source code listing
+% that doesn't work well with TeX4ht otherwise. It is redefined in config.cfg. 
+% you can remove it if you don't need it.
+\newenvironment{likeverbatim}{}{}
