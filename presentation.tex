@@ -15,7 +15,7 @@ It lets you create both the talk itself and a more detailed handout with notes a
 commentary. That way, you can generate everything from a single source—both the
 material for the live talk and something useful for people who didn’t attend.
 
-It includes three main source files, each with a specific purpose:
+It includes several main source files, each with a specific purpose:
 
 \begin{frame}[fragile]{Overview of Files}
   \begin{itemize}
@@ -23,17 +23,43 @@ It includes three main source files, each with a specific purpose:
    \item \textbf{\texttt{handout.tex}}
    \item \textbf{\texttt{presentation.tex}}
    \item \textbf{\texttt{preamble.tex}}
+   \item \textbf{\texttt{config.cfg}}
   \end{itemize}
 \end{frame}
 \begin{itemize}
-  \item \textbf{\texttt{slides.tex}} – This file is used to generate the main presentation in Beamer format. It contains the content that is shown during the talk.
+  \item \textbf{\texttt{slides.tex}} – This file is used to generate the main
+    presentation in Beamer format. It contains the content that is shown during
+    the talk.
   
-  \item \textbf{\texttt{handout.tex}} – A handout version of the presentation, formatted as a standard article. In addition to the visible content from the slides, it includes supplementary notes and commentary that do not appear in the presentation itself. This file is intended to be distributed after the presentation and should be self-contained, so that it is useful even to those who did not attend the talk.
+  \item \textbf{\texttt{handout.tex}} – A handout version of the presentation,
+    formatted as a standard article. In addition to the visible content from
+    the slides, it includes supplementary notes and commentary that do not
+    appear in the presentation itself. This file is intended to be distributed
+    after the presentation and should be self-contained, so that it is useful
+    even to those who did not attend the talk.
   
-  \item \textbf{\texttt{presentation.tex}} – This file contains the full source text of the presentation. Content written inside \verb|\begin|\verb|{frame}...\end{frame}| blocks is included both in the \texttt{slides.tex} and \texttt{handout.tex} outputs. Any text outside of frames is excluded from the presentation but included in the handout. This allows the author to provide detailed commentary, background, or additional explanation that supports the talk.
+  \item \textbf{\texttt{presentation.tex}} – This file contains the full source
+    text of the presentation. Content written inside
+    \verb|\begin|\verb|{frame}...\end{frame}| blocks is included both in the
+    \texttt{slides.tex} and \texttt{handout.tex} outputs. Any text outside of
+    frames is excluded from the presentation but included in the handout. This
+    allows the author to provide detailed commentary, background, or additional
+    explanation that supports the talk.
 
-  \item \textbf{preamble.tex} – This file includes packages or defines commands used in the presentation.
+  \item \textbf{preamble.tex} – This file includes packages or defines commands
+    used in the presentation.
+
+  \item \textbf{config.cfg} – This file contains configuration options for
+    \TeX4ht. For example CSS styles used in the web version of this document,
+    or redefinitions of \LaTeX\ commands.
+
 \end{itemize}
+
+You can edit these files to customize the presentation and handout to your
+needs. At the minimum, you will want to replace contents of
+\texttt{presentation.tex} with your own text, and you may also want to modify
+the \texttt{preamble.tex} file to include any additional packages or commands
+you need.
 
 
 \begin{frame}[fragile]{Usage of Frames and Handout Commentary}
