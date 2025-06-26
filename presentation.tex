@@ -61,8 +61,24 @@ needs. At the minimum, you will want to replace contents of
 the \texttt{preamble.tex} file to include any additional packages or commands
 you need.
 
+\section{Basic Usage}
+
+\begin{frame}[fragile]{Create a New Github Repository}
+  \includegraphics[width=\textwidth]{img/template-use.png}
+\end{frame}
+
+To start your own presentation using this template, click the "Use this
+template" button at the top of the GitHub repository page. This will create a
+new repository in your account with the same structure and files. You can then
+clone it, customize the content, and start building your own slides and
+handouts.
+
 
 \begin{frame}[fragile]{Usage of Frames and Handout Commentary}
+
+  \begin{block}{}
+    A basic syntax of the document used in \verb|presentation.tex| is following:
+  \end{block}
 
 \begin{likeverbatim}  
   \verb|\begin{frame}{Frame title}|\\
@@ -74,7 +90,7 @@ you need.
 
 \end{frame}
 
-For example, source code of the previous text looks like this:
+For example, source code of one of the previous frames looks like this:
 
 \verb|\begin|\verb|{frame}[fragile]{Overview of Files}|
 \begin{verbatim}
