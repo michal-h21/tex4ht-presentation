@@ -149,7 +149,7 @@ You can compile the output files using any standard \LaTeX\ distribution that in
 \begin{frame}[fragile]{HTML Version}
   Use \href{https://www.tug.org/tex4ht/}{\TeX4ht} to compile the presentation to HTML format. 
 \begin{verbatim}
-$ make4ht -l handout.tex    
+$ make4ht -c config -l handout.tex    
 \end{verbatim}
 
 The \verb|-l| option  ensures that Lua\LaTeX\ is used as the compiler. 
@@ -159,6 +159,27 @@ The \verb|-l| option  ensures that Lua\LaTeX\ is used as the compiler.
 The HTML version is built from the article-style handout, not the Beamer slides.
 This makes it better suited for the web or long-term sharing, since it includes
 all explanations and doesn’t depend on slide layout.
+
+\begin{frame}[fragile]{\TeX4ht Configuration}
+
+\begin{block}{}
+CSS declaration for the table of contents links color:
+\end{block}
+  
+\begin{verbatim}
+\Css{.tableofcontents a {color: \#0f0f0f;}}
+\Css{.tableofcontents a:hover {color: \#6f5f4f;}}
+\end{verbatim}
+\end{frame}
+
+You can customize the appearance of the output by editing the \texttt{config.cfg} file.
+The above example shows how to change the color of links in the table of contents.
+You may also want to change the background color of the TOC. Note that 
+if you want to use CSS RGB colors, you need to use the \verb|\#| character.
+
+You can find more information about \TeX4ht configuration files in the 
+\href{https://www.kodymirus.cz/tex4ht-doc/Configurations.html}{\TeX4ht documentation}.
+
 
 \section{Automated HTML Output}
 
