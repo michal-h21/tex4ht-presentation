@@ -15,9 +15,9 @@
 
                                                                   
 
-<h2 class='titleHead'>Structured Presentation Template</h2>
+<h1 class='titleHead'>Structured Presentation Template</h1>
  <div class='author'><span class='ec-lmr-12'>Michal Hoftich</span></div><br />
-<div class='date'><span class='ec-lmr-12'>June 27, 2025</span></div>
+<div class='date'><span class='ec-lmr-12'>December 2, 2025</span></div>
 </div>   
 
 <h3 class='likesectionHead' id='contents'><a id='x1-1000'></a>Contents</h3>
@@ -98,7 +98,7 @@ additional packages or commands you need.
 </p><!-- l. 67 --><p class='noindent'>
 </p><!-- l. 67 --><p class='indent'>   <img alt='PIC' src='img/template-use.png' />
 </p><!-- l. 70 --><p class='noindent'>To start your own presentation using this template, click the "Use this template"
-button at the top of the  <a href='https://github.com/michal-h21/tex4ht-presentation'>GitHub repository page</a>. This will create a new repository in
+button at the top of the <a href='https://github.com/michal-h21/tex4ht-presentation'>GitHub repository page</a>. This will create a new repository in
 your account with the same structure and files. You can then clone it, customize the
 content, and start building your own slides and handouts.
 <a id='x1-5001r3'></a>   
@@ -192,7 +192,7 @@ includes Beamer and the necessary packages.
 <!-- l. 150 --><p class='noindent'><span class='likeparagraphHead' id='html-version'><a id='x1-10000'></a>HTML Version</span>
  
 </p><!-- l. 150 --><p class='noindent'>
-</p><!-- l. 150 --><p class='indent'>   Use  <a href='https://www.tug.org/tex4ht/'>TeX4ht</a> to compile the presentation to HTML format.
+</p><!-- l. 150 --><p class='indent'>   Use <a href='https://www.tug.org/tex4ht/'>TeX4ht</a> to compile the presentation to HTML format.
                                                                   
 
                                                                   
@@ -226,12 +226,12 @@ explanations and doesn’t depend on slide layout.
 The above example shows how to change the color of links in the table of contents.
 You may also want to change the background color of the TOC. Note that if you
 want to use CSS RGB colors, you need to use the <span class='obeylines-h'><code class='verb'>\#</code></span> character.
-</p><!-- l. 180 --><p class='indent'>   You can find more information about TeX4ht configuration files in the  <a href='https://www.kodymirus.cz/tex4ht-doc/Configurations.html'>TeX4ht
+</p><!-- l. 180 --><p class='indent'>   You can find more information about TeX4ht configuration files in the <a href='https://www.kodymirus.cz/tex4ht-doc/Configurations.html'>TeX4ht
 documentation</a>.
 
 </p>   
 <h3 class='sectionHead' id='automated-html-output'><span class='titlemark'>4   </span> <a id='x1-120004'></a>Automated HTML Output</h3>
-<!-- l. 186 --><p class='noindent'>This section explains how  <a href='https://docs.github.com/en/actions/writing-workflows/quickstart'>GitHub Actions</a> is used to automatically generate and
+<!-- l. 186 --><p class='noindent'>This section explains how <a href='https://docs.github.com/en/actions/writing-workflows/quickstart'>GitHub Actions</a> is used to automatically generate and
 publish an HTML version of the handout whenever changes are pushed to the <span class='ec-lmtt-10'>main</span>
 branch.
 </p><!-- l. 189 --><p class='indent'>   The output is built using <span class='ec-lmtt-10'>make4ht </span>and published to the <span class='ec-lmtt-10'>gh-pages </span>branch, making
@@ -264,7 +264,7 @@ it easy to share a web-readable version of the talk.
 </p><!-- l. 212 --><p class='indent'>   The workflow is defined in <span class='ec-lmtt-10'>.github/workflows/main.yml</span>. You can edit this
 file to customize the build process, such as changing the options passed to
 <span class='ec-lmtt-10'>make4ht</span>.
-</p><!-- l. 215 --><p class='indent'>   It uses two GitHub Actions:  <a href='https://github.com/xu-cheng/texlive-action'>xu-cheng/texlive-action</a> and  <a href='https://github.com/peaceiris/actions-gh-pages'>peaceiris/actions-gh-pages</a>.
+</p><!-- l. 215 --><p class='indent'>   It uses two GitHub Actions: <a href='https://github.com/xu-cheng/texlive-action'>xu-cheng/texlive-action</a> and <a href='https://github.com/peaceiris/actions-gh-pages'>peaceiris/actions-gh-pages</a>.
 The first one lets you use any command available in the TeX Live installation, such
 as <span class='ec-lmtt-10'>make4ht </span>or <span class='ec-lmtt-10'>lualatex</span>. The second one publishes the contents of a specified
 directory to the <span class='ec-lmtt-10'>gh-pages </span>branch of your repository, which is used by GitHub Pages
